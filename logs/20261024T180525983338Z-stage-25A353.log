@@ -1,0 +1,4 @@
+revision=f6217f891ac0bb64f3d375211650a4c1ff8ca1ea
+cwd=/Volumes/porter-crush/home/trees/roads/xnu-lab
+command=ditto /Volumes/porter-crush/home/scratch/xnu-lab/kdk-25A353/expanded/KDK_SDK.pkg/Payload /Volumes/porter-crush/home/scratch/xnu-lab/kdk-25A353/root
+exit_status=0 timeout=0

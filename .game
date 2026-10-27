@@ -1,0 +1,29 @@
+name pronghorn
+run test . :: python3 -m unittest -v
+run fetch . :: python3 -u lab.py fetch
+run preflight . :: python3 -u lab.py preflight
+run probe . :: python3 -u lab.py probe
+run build-xnu . :: python3 -u lab.py build
+run fetch-environment . :: python3 -u environment.py fetch
+run extract-kdks . :: python3 -u environment.py extract
+run inventory . :: python3 -u environment.py inventory
+run prepare-sdk . :: python3 -u environment.py prepare
+run kernel-headers . :: python3 -u environment.py headers
+run build-firehose . :: python3 -u environment.py firehose
+run build-kernel . :: python3 -u environment.py kernel
+run build-ctf . :: python3 -u environment.py ctf
+run build-collection . :: python3 -u environment.py collection
+run prepare-vm . :: python3 -u environment.py vm
+run verify-kernel . :: python3 -u environment.py verify
+run build-vm . :: xcrun swiftc -warnings-as-errors vm.swift -o xnu-vm
+run sign-vm . :: codesign --force --sign - --entitlements vm-entitlements.plist xnu-vm
+run inspect-vm . :: ./xnu-vm inspect
+run install-vm . :: ./xnu-vm install
+run retry-install-vm . :: ./xnu-vm retry-install
+run start-vm . :: ./xnu-vm run
+run recover-vm . :: ./xnu-vm recovery
+run prepare-virtualbuddy-diagnostics . :: python3 virtualbuddy_overlay.py
+run build-restore-diagnostics-tests . :: xcrun swiftc -warnings-as-errors RestoreDiagnostics.swift RestoreDiagnosticsTests.swift -o restore-diagnostics-tests
+run test-restore-diagnostics . :: ./restore-diagnostics-tests
+run sign-virtualbuddy . :: python3 sign_virtualbuddy.py
+run build-virtualbuddy . :: xcodebuild -project /Volumes/porter-crush/home/shared/VirtualBuddy-diagnostic-source/VirtualBuddy.xcodeproj -scheme VirtualBuddy -configuration Release -derivedDataPath /Volumes/porter-crush/home/shared/VirtualBuddy-diagnostic-build -jobs 2 build CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY=- CODE_SIGN_STYLE=Manual DEVELOPMENT_TEAM= PROVISIONING_PROFILE_SPECIFIER= ARCHS=arm64 ONLY_ACTIVE_ARCH=YES

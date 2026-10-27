@@ -1,0 +1,24 @@
+revision=f6217f891ac0bb64f3d375211650a4c1ff8ca1ea
+cwd=/Volumes/porter-crush/home/trees/roads/xnu-lab
+command=xcrun lldb --batch -o 'target create /Volumes/porter-crush/home/scratch/xnu-lab/build/obj/DEVELOPMENT_ARM64_VMAPPLE/kernel.development.vmapple' -o 'image lookup -n fmod_watch' -o 'image lookup -n add_fsevent'
+(lldb) target create /Volumes/porter-crush/home/scratch/xnu-lab/build/obj/DEVELOPMENT_ARM64_VMAPPLE/kernel.development.vmapple
+warning: 'kernel.development' contains a debug script. To run this script in this debug session:
+
+    command script import "/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/DEVELOPMENT_ARM64_VMAPPLE/kernel.development.vmapple.dSYM/Contents/Resources/Python/kernel_development.py"
+
+To run all discovered debug scripts in this session:
+
+    settings set target.load-script-from-symbol-file true
+
+Current executable set to '/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/DEVELOPMENT_ARM64_VMAPPLE/kernel.development.vmapple' (arm64e).
+(lldb) image lookup -n fmod_watch
+1 match found in /Volumes/porter-crush/home/scratch/xnu-lab/build/obj/DEVELOPMENT_ARM64_VMAPPLE/kernel.development.vmapple:
+        Address: kernel.development.vmapple[0xfffffe00076fac74] (kernel.development.vmapple.__TEXT_EXEC.__text + 3665012)
+        Summary: kernel.development.vmapple`fseventsf_read + 128 [inlined] uio_resid at kern_subr.c:675:6
+                 kernel.development.vmapple`fseventsf_read + 128 [inlined] fmod_watch at vfs_fsevents.c:1966:26
+                 kernel.development.vmapple`fseventsf_read + 128 at vfs_fsevents.c:2188:10
+(lldb) image lookup -n add_fsevent
+1 match found in /Volumes/porter-crush/home/scratch/xnu-lab/build/obj/DEVELOPMENT_ARM64_VMAPPLE/kernel.development.vmapple:
+        Address: kernel.development.vmapple[0xfffffe00076f6dcc] (kernel.development.vmapple.__TEXT_EXEC.__text + 3648972)
+        Summary: kernel.development.vmapple`add_fsevent at vfs_fsevents.c:378
+exit_status=0 timeout=0

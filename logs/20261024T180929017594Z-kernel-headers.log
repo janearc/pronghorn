@@ -1,0 +1,25 @@
+revision=f6217f891ac0bb64f3d375211650a4c1ff8ca1ea
+cwd=/Volumes/porter-crush/home/scratch/xnu-lab/source
+command=/usr/bin/make -j2 MAKEJOBS=-j2 SDKROOT=/Volumes/porter-crush/home/scratch/xnu-lab/MacOSX26.2.sdk ARCH_CONFIGS=ARM64 KERNEL_CONFIGS=DEVELOPMENT MACHINE_CONFIGS=VMAPPLE RC_DARWIN_KERNEL_VERSION=12377.1.9 KDKROOT=/Volumes/porter-crush/home/scratch/xnu-lab/kdk-25A353/root installhdrs OBJROOT=/Volumes/porter-crush/home/scratch/xnu-lab/headers/obj SYMROOT=/Volumes/porter-crush/home/scratch/xnu-lab/headers/sym DSTROOT=/Volumes/porter-crush/home/scratch/xnu-lab/headers/root
+2026-10-24 11:09:29.504 xcodebuild[54877:1168502532] Writing error result bundle to /var/folders/67/ffdkwbfs2w99_cwz9np4csyr0000gn/T/ResultBundle_2026-24-10_11-09-0029.xcresult
+xcodebuild: error: SDK "/Volumes/porter-crush/home/scratch/xnu-lab/MacOSX26.2.sdk" cannot be located.
+xcrun: error: unable to lookup item 'SDKVersion' in SDK '/Volumes/porter-crush/home/scratch/xnu-lab/MacOSX26.2.sdk'
+2026-10-24 11:09:29.999 xcodebuild[55201:1168503315] Writing error result bundle to /var/folders/67/ffdkwbfs2w99_cwz9np4csyr0000gn/T/ResultBundle_2026-24-10_11-09-0029.xcresult
+xcodebuild: error: SDK "/Volumes/porter-crush/home/scratch/xnu-lab/MacOSX26.2.sdk" cannot be located.
+xcrun: error: unable to lookup item 'PlatformPath' in SDK '/Volumes/porter-crush/home/scratch/xnu-lab/MacOSX26.2.sdk'
+            MIG clock.h
+clang: error: missing version number in '-mmacosx-version-min='
+mig: fatal: "<no name yet>", line -1: no SubSystem declaration
+make[5]: *** [clock.h] Error 1
+make[4]: *** [build_exporthdrs_mi] Error 2
+make[3]: *** [build_exporthdrs_mi_recurse_into_mach] Error 2
+make[2]: *** [build_exporthdrs_mi_recurse_into_osfmk] Error 2
+make[1]: *** [build_exporthdrs_mi_bootstrap_DEVELOPMENT^ARM64^VMAPPLE] Error 2
+make[1]: *** Waiting for unfinished jobs....
+     INSTALLHDR cpu_number.h
+     INSTALLHDR cpu_capabilities.h
+     INSTALLHDR cpu_x86_64_capabilities.h
+     INSTALLHDR lock.h
+     INSTALLHDR simple_lock.h
+make: *** [installhdrs] Error 2
+exit_status=2 timeout=0

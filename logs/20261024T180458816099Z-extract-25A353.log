@@ -1,0 +1,65 @@
+revision=f6217f891ac0bb64f3d375211650a4c1ff8ca1ea
+cwd=/Volumes/porter-crush/home/trees/roads/xnu-lab
+command=7zz x -y -mmt=2 -o/Volumes/porter-crush/home/scratch/xnu-lab/kdk-25A353/packages /Volumes/porter-crush/home/scratch/xnu-lab/kdk-25A353.dmg 'Kernel Debug Kit/KernelDebugKit.pkg'
+
+7-Zip (z) 26.02 (arm64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-06-25
+ 64-bit arm_v:8.5-A locale=en_US.UTF-8 Threads:16 OPEN_MAX:4096, ASM
+
+Scanning the drive for archives:
+1 file, 947857380 bytes (904 MiB)
+
+Extracting archive: /Volumes/porter-crush/home/scratch/xnu-lab/kdk-25A353.dmg
+
+3.hfsx
+WARNINGS:
+There are data after the end of archive
+
+--
+Path = /Volumes/porter-crush/home/scratch/xnu-lab/kdk-25A353.dmg
+Type = Dmg
+Physical Size = 947857380
+Method = Zero2 LZFSE CRC
+Blocks = 933
+Cluster Size = 1048576
+Comment = 
+{
+unpack-size: 1049242624
+ID: 52b77711e30a403491fb868a930728c9
+master-checksum: CRC: B9777DBB
+pack-checksum: CRC: A66558F6
+pack-offset: 0
+pack-length: 947795305
+xml-offset: 947795305
+xml-length: 61563
+}
+----
+Path = 3.hfsx
+Size = 1049208320
+Packed Size = 947794620
+Comment = Untitled 1 (Apple_HFSX : 3)
+Method = Zero2 LZFSE CRC
+Blocks = 928
+Cluster Size = 1048576
+Checksum = 1DD296CE
+ID = 3
+--
+Path = 3.hfsx
+Type = HFS
+WARNINGS:
+There are data after the end of archive
+Physical Size = 1049206784
+Tail Size = 1536
+Method = HFSX
+Cluster Size = 4096
+Free Space = 82219008
+Created = 2025-09-07 00:25:07
+Modified = 2025-09-07 11:37:47
+
+Everything is Ok
+
+Archives with Warnings: 1
+
+Warnings: 1
+Size:       941974308
+Compressed: 947857380
+exit_status=0 timeout=0

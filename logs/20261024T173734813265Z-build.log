@@ -1,0 +1,98 @@
+revision=f6217f891ac0bb64f3d375211650a4c1ff8ca1ea
+cwd=/Volumes/porter-crush/home/scratch/xnu-lab/source
+command=/usr/bin/make -j2 MAKEJOBS=-j2 SDKROOT=macosx ARCH_CONFIGS=ARM64 KERNEL_CONFIGS=DEVELOPMENT MACHINE_CONFIGS=VMAPPLE RC_DARWIN_KERNEL_VERSION=12377.1.9 OBJROOT=/Volumes/porter-crush/home/scratch/xnu-lab/build/obj SYMROOT=/Volumes/porter-crush/home/scratch/xnu-lab/build/sym DSTROOT=/Volumes/porter-crush/home/scratch/xnu-lab/build/dst MAKE_SYMBOL_ALIASING=/Volumes/porter-crush/home/trees/roads/xnu-lab/symbol-aliasing.sh all
+       GENERATE bsd/sys/_symbol_aliasing.h
+       GENERATE xnuVersion with version "12377.1.9"
+            IIG IOBufferMemoryDescriptor.h
+            IIG IODataQueueDispatchSource.h
+       GENERATE bsd.syscalls.master from /Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/kern/syscalls.master
+            IIG IODispatchQueue.h
+       GENERATE bsd/sys/sysproto.h from bsd.syscalls.master
+            IIG IODispatchSource.h
+            IIG IODMACommand.h
+            IIG IOEventLink.h
+            IIG IOExtensiblePaniclog.h
+            IIG IOInterruptDispatchSource.h
+            IIG IOMemoryDescriptor.h
+            IIG IOMemoryMap.h
+            IIG IOService.h
+            IIG IOServiceNotificationDispatchSource.h
+            IIG IOServiceStateNotificationDispatchSource.h
+            IIG IOUserClient.h
+            IIG IOUserServer.h
+            IIG IOWorkGroup.h
+            IIG OSAction.h
+            IIG OSObject.h
+       GENERATE bsd/sys/syscall.h from bsd.syscalls.master
+            MIG clock.h
+            MIG clock_priv.h
+            MIG host_priv.h
+            MIG host_security.h
+            MIG ktrace_background.h
+            MIG mach_host.h
+            MIG mach_port.h
+            MIG mach_vm.h
+            MIG mach_voucher.h
+            MIG mach_voucher_attr_control.h
+            MIG memory_entry.h
+            MIG processor.h
+            MIG processor_set.h
+       GENERATE libkern/version.h from /Volumes/porter-crush/home/scratch/xnu-lab/source/libkern/libkern/version.h.template
+            MIG task.h
+            MIG task_access.h
+            MIG thread_act.h
+            MIG upl.h
+            MIG vm_map.h
+            MIG vfs_nspace.h
+            MIG audit_triggers_server.h
+            MIG clock_reply_server.h
+            MIG coalition_notification_server.h
+            MIG doubleagent_mig_server.h
+            MIG exc_server.h
+            MIG fairplayd_notification_server.h
+            MIG arcade_upcall_server.h
+            MIG memory_error_notification_server.h
+            MIG mach_exc_server.h
+            MIG notify_server.h
+            MIG task_access_server.h
+            MIG telemetry_notification_server.h
+            MIG sysdiagnose_notification_server.h
+            MIG iocompressionstats_notification_server.h
+            MIG vfs_nspace_server.h
+            MIG gssd_mach.h
+            MIG kextd_mach.h
+            MIG lockd_mach.h
+             CC mac_audit.o
+       GENERATE bsd.syscalls.master from /Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/kern/syscalls.master
+clang: error: no such include directory: '/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/local/include/kernel' [-Werror,-Wmissing-include-dirs]
+clang: error: no such include directory: '/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/local/include/' [-Werror,-Wmissing-include-dirs]
+clang: error: no such include directory: '/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk//System/Library/Frameworks/Kernel.framework/Versions/A/PrivateHeaders/AppleFeatures' [-Werror,-Wmissing-include-dirs]
+clang: error: no such include directory: '/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk//System/Library/Frameworks/Kernel.framework/Versions/A/PrivateHeaders/platform' [-Werror,-Wmissing-include-dirs]
+make[7]: *** [mac_audit.o] Error 1
+make[6]: *** [build_all] Error 2
+make[5]: *** [do_all] Error 2
+             CC randomdev.o
+make[4]: *** [build_all] Error 2
+make[3]: *** [build_all_recurse_into_conf] Error 2
+make[2]: *** [build_all_recurse_into_security] Error 2
+make[2]: *** Waiting for unfinished jobs....
+             CC memdev.o
+clang: error: no such include directory: '/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/local/include/kernel' [-Werror,-Wmissing-include-dirs]
+clang: error: no such include directory: '/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/local/include/' [-Werror,-Wmissing-include-dirs]
+clang: error: no such include directory: '/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk//System/Library/Frameworks/Kernel.framework/Versions/A/PrivateHeaders/AppleFeatures' [-Werror,-Wmissing-include-dirs]
+clang: error: no such include directory: '/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk//System/Library/Frameworks/Kernel.framework/Versions/A/PrivateHeaders/platform' [-Werror,-Wmissing-include-dirs]
+make[7]: *** [randomdev.o] Error 1
+make[7]: *** Waiting for unfinished jobs....
+clang: error: no such include directory: '/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/local/include/kernel' [-Werror,-Wmissing-include-dirs]
+clang: error: no such include directory: '/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/local/include/' [-Werror,-Wmissing-include-dirs]
+clang: error: no such include directory: '/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk//System/Library/Frameworks/Kernel.framework/Versions/A/PrivateHeaders/AppleFeatures' [-Werror,-Wmissing-include-dirs]
+clang: error: no such include directory: '/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk//System/Library/Frameworks/Kernel.framework/Versions/A/PrivateHeaders/platform' [-Werror,-Wmissing-include-dirs]
+make[7]: *** [memdev.o] Error 1
+make[6]: *** [build_all] Error 2
+make[5]: *** [do_all] Error 2
+make[4]: *** [build_all] Error 2
+make[3]: *** [build_all_recurse_into_conf] Error 2
+make[2]: *** [build_all_recurse_into_bsd] Error 2
+make[1]: *** [build_all_bootstrap_DEVELOPMENT^ARM64^VMAPPLE] Error 2
+make: *** [all] Error 2
+exit_status=2 timeout=0

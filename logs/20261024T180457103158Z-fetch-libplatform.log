@@ -1,0 +1,23 @@
+revision=f6217f891ac0bb64f3d375211650a4c1ff8ca1ea
+cwd=/Volumes/porter-crush/home/trees/roads/xnu-lab
+command=git clone --depth 1 --branch libplatform-359.1.2 https://github.com/apple-oss-distributions/libplatform /Volumes/porter-crush/home/scratch/xnu-lab/dependencies/libplatform
+Cloning into '/Volumes/porter-crush/home/scratch/xnu-lab/dependencies/libplatform'...
+warning: refs/tags/libplatform-359.1.2 3f005030ecfc825d54553ece41e5cbf811841e19 is not a commit!
+Note: switching to 'e9e92dd1ba90c4b703c37c031e2bec1c96fd6f91'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+exit_status=0 timeout=0

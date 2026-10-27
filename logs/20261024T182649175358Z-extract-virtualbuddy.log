@@ -1,0 +1,84 @@
+revision=f6217f891ac0bb64f3d375211650a4c1ff8ca1ea
+cwd=/Volumes/porter-crush/home/trees/roads/xnu-lab
+command=7zz x -y -mmt=2 -o/Volumes/porter-crush/home/scratch/xnu-lab/virtualbuddy /Volumes/porter-crush/home/scratch/xnu-lab/VirtualBuddy_v2.2.1-430.dmg
+
+7-Zip (z) 26.02 (arm64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-06-25
+ 64-bit arm_v:8.5-A locale=en_US.UTF-8 Threads:16 OPEN_MAX:4096, ASM
+
+Scanning the drive for archives:
+1 file, 22041237 bytes (22 MiB)
+
+Extracting archive: /Volumes/porter-crush/home/scratch/xnu-lab/VirtualBuddy_v2.2.1-430.dmg
+--
+Path = /Volumes/porter-crush/home/scratch/xnu-lab/VirtualBuddy_v2.2.1-430.dmg
+Type = Dmg
+Physical Size = 22041237
+Method = Zero2 LZFSE CRC
+Blocks = 49
+Cluster Size = 1048576
+Comment = 
+{
+Name: VirtualBuddy_v2.2.1-430
+unpack-size: 95420416
+ID: fdf1076036224509bcd7ab2a3c8293d4
+master-checksum: CRC: 7F5EAB9A
+pack-checksum: CRC: 836CE46B
+pack-offset: 0
+pack-length: 22018353
+xml-offset: 22018353
+xml-length: 10349
+blob-offset: 22028702
+blob-length: 12023
+}
+----
+Path = 4.apfs
+Size = 95379456
+Packed Size = 22017627
+Comment = disk image (Apple_APFS : 4)
+Method = Zero2 LZFSE CRC
+Blocks = 42
+Cluster Size = 1048576
+Checksum = CE5D6C94
+ID = 4
+--
+Path = 4.apfs
+Type = APFS
+Physical Size = 95379456
+Name = VirtualBuddy.apfs
+ID = 2987789b5b84478a98052b89fe720172
+Cluster Size = 4096
+Created = 2026-10-19 05:27:19.122472323
+Modified = 2026-10-19 05:27:20.475852109
+Comment = 
+{
+block_size: 4096
+fs_index: 0
+volume_name: VirtualBuddy
+vol_uuid: 550cd90bf67d4603bf7f763a18177524
+incompatible_features: CASE_INSENSITIVE
+fs_alloc_count: 10104
+num_files: 199
+num_directories: 193
+num_symlinks: 66
+num_other_fsobjects: 0
+Num_Attr_Streams: 0
+num_snapshots: 0
+total_blocks_alloced: 10065
+total_blocks_freed: 0
+unmounted: 2026-10-19 05:27:20.475854567
+last_modified: 2026-10-19 05:27:20.455169660
+formatted_by: newfs_apfs (3288.1.3)
+  timestamp: 2026-10-19 05:27:19.122472323
+  last_xid: 2
+modified_by[0]: apfs_kext (3288.1.3)
+  timestamp: 2026-10-19 05:27:20.475852109
+  last_xid: 4
+}
+
+Everything is Ok
+
+Folders: 193
+Files: 199
+Size:       40774908
+Compressed: 22041237
+exit_status=0 timeout=0

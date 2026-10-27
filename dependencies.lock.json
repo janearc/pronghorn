@@ -1,0 +1,26 @@
+{
+  "bootstrap_cmds": {
+    "tag": "bootstrap_cmds-138",
+    "commit": "c71d2d72f48995baaea76148f61002e5299841de"
+  },
+  "dtrace": {
+    "tag": "dtrace-413",
+    "commit": "4e57fe5c4dcf71e455817e7f26fc1f68e6eb4fe2"
+  },
+  "AvailabilityVersions": {
+    "tag": "AvailabilityVersions-155",
+    "commit": "97f1225840fe7e2d97371c8e8beff6e149fce595"
+  },
+  "Libsystem": {
+    "tag": "Libsystem-1356",
+    "commit": "c23b51183e46e613375dc7639fb4bf11fbf59ba8"
+  },
+  "libplatform": {
+    "tag": "libplatform-359.1.2",
+    "commit": "e9e92dd1ba90c4b703c37c031e2bec1c96fd6f91"
+  },
+  "libdispatch": {
+    "tag": "libdispatch-1542.0.4",
+    "commit": "2361ffb78a76f7ee488cd052eb0bc5c767118bf9"
+  }
+}

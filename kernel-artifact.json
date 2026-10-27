@@ -1,0 +1,9 @@
+{
+  "source": "f6217f891ac0bb64f3d375211650a4c1ff8ca1ea",
+  "sha256": "70ef0c966691cc30593b2894569668efa3d015b533e341d8a60f8f07ac6c4c69",
+  "uuid": "DA7FB709-348B-3A7F-890F-7CD737199A89",
+  "boot_verified": false,
+  "platform_kdk": "25A353",
+  "entitlement_headers_kdk": "25E246",
+  "ctf_embedded": false
+}

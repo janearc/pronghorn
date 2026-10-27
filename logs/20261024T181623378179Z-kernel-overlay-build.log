@@ -1,0 +1,649 @@
+revision=f6217f891ac0bb64f3d375211650a4c1ff8ca1ea
+cwd=/Volumes/porter-crush/home/scratch/xnu-lab/source
+command=/usr/bin/make -j2 MAKEJOBS=-j2 SDKROOT=/Volumes/porter-crush/home/scratch/xnu-lab/MacOSX26.2.sdk ARCH_CONFIGS=ARM64 KERNEL_CONFIGS=DEVELOPMENT MACHINE_CONFIGS=VMAPPLE RC_DARWIN_KERNEL_VERSION=12377.1.9 OBJROOT=/Volumes/porter-crush/home/scratch/xnu-lab/build/obj SYMROOT=/Volumes/porter-crush/home/scratch/xnu-lab/build/sym DSTROOT=/Volumes/porter-crush/home/scratch/xnu-lab/build/dst KDKROOT=/Volumes/porter-crush/home/scratch/xnu-lab/kdk-25A353/root MAKE_SYMBOL_ALIASING=/Volumes/porter-crush/home/trees/roads/xnu-lab/symbol-aliasing.sh all SDKVERSION=26.2 PLATFORMPATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform PLATFORM=MacOSX 'INCFLAGS_EXTERN=-I/Volumes/porter-crush/home/scratch/xnu-lab/additions -I/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS' 'INCFLAGS_SDK=-I/Volumes/porter-crush/home/scratch/xnu-lab/MacOSX26.2.sdk/usr/local/include -I/Volumes/porter-crush/home/scratch/xnu-lab/kdk-25A353/root/System/Library/Frameworks/Kernel.framework/Versions/A/PrivateHeaders' INCFLAGS_PLATFORM=-I/Volumes/porter-crush/home/scratch/xnu-lab/kdk-25A353/root/System/Library/Frameworks/Kernel.framework/Versions/A/PrivateHeaders/platform 'KCC=sh /Volumes/porter-crush/home/trees/roads/xnu-lab/kernel-cc.sh clang -ivfsoverlay /Volumes/porter-crush/home/scratch/xnu-lab/additions/clang-overlay.json' 'CXX=sh /Volumes/porter-crush/home/trees/roads/xnu-lab/kernel-cc.sh clang++ -ivfsoverlay /Volumes/porter-crush/home/scratch/xnu-lab/additions/clang-overlay.json' 'LDFLAGS_KERNEL_ONLY_CONFIG_DEVELOPMENTARM64=-rdynamic -Wl,-force_load,/Volumes/porter-crush/home/scratch/xnu-lab/kdk-25A353/root/System/Library/KernelSupport/libVMAPPLE.os.DEVELOPMENT.a'
+            C++ IOUserServer.cpo
+In file included from /Volumes/porter-crush/home/scratch/xnu-lab/source/iokit/Kernel/IOUserServer.cpp:33:
+In file included from /Volumes/porter-crush/home/scratch/xnu-lab/source/iokit/IOKit/IOUserClient.h:37:
+In file included from /Volumes/porter-crush/home/scratch/xnu-lab/source/iokit/IOKit/IOService.h:44:
+In file included from /Volumes/porter-crush/home/scratch/xnu-lab/source/iokit/IOKit/IORegistryEntry.h:40:
+In file included from /Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSContainers.h:33:
+In file included from /Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSObject.h:37:
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:1149:15: warning: 'retain' overrides a member function but is not marked 'override' [-Wsuggest-override]
+ 1149 |         virtual void retain() const;
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:637:15: note: overridden virtual function is here
+  637 |         virtual void retain() const = 0;
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:1163:15: warning: 'release' overrides a member function but is not marked 'override' [-Wsuggest-override]
+ 1163 |         virtual void release() const;
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:655:15: note: overridden virtual function is here
+  655 |         virtual void release() const = 0;
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:1180:15: warning: 'release' overrides a member function but is not marked 'override' [-Wsuggest-override]
+ 1180 |         virtual void release(int freeWhen) const;
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:601:15: note: overridden virtual function is here
+  601 |         virtual void release(int freeWhen) const = 0;
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:1197:15: warning: 'taggedRetain' overrides a member function but is not marked 'override' [-Wsuggest-override]
+ 1197 |         virtual void taggedRetain(const void * tag = NULL) const;
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:885:15: note: overridden virtual function is here
+  885 |         virtual void taggedRetain(const void * tag = NULL) const = 0;
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:1214:15: warning: 'taggedRelease' overrides a member function but is not marked 'override' [-Wsuggest-override]
+ 1214 |         virtual void taggedRelease(const void * tag = NULL) const;
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:904:15: note: overridden virtual function is here
+  904 |         virtual void taggedRelease(const void * tag = NULL) const = 0;
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:1232:15: warning: 'taggedRelease' overrides a member function but is not marked 'override' [-Wsuggest-override]
+ 1232 |         virtual void taggedRelease(
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:923:15: note: overridden virtual function is here
+  923 |         virtual void taggedRelease(
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:1252:14: warning: 'getRetainCount' overrides a member function but is not marked 'override' [-Wsuggest-override]
+ 1252 |         virtual int getRetainCount() const;
+      |                     ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:619:14: note: overridden virtual function is here
+  619 |         virtual int getRetainCount() const = 0;
+      |                     ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:1265:30: warning: 'getMetaClass' overrides a member function but is not marked 'override' [-Wsuggest-override]
+ 1265 |         virtual const OSMetaClass * getMetaClass() const;
+      |                                     ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:688:30: note: overridden virtual function is here
+  688 |         virtual const OSMetaClass * getMetaClass() const = 0;
+      |                                     ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:1337:2: warning: '~OSMetaClass' overrides a destructor but is not marked 'override' [-Wsuggest-destructor-override]
+ 1337 |         ~OSMetaClass();
+      |         ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:555:2: note: overridden virtual function is here
+  555 |         ~OSMetaClassBase();
+      |         ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:2615:15: warning: 'serialize' overrides a member function but is not marked 'override' [-Wsuggest-override]
+ 2615 |         virtual bool serialize(OSSerialize * serializer) const;
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:673:15: note: overridden virtual function is here
+  673 |         virtual bool serialize(OSSerialize * serializer) const = 0;
+      |                      ^
+             CC devfs_fdesc_support.o
+             CC spec_vnops.o
+/Volumes/porter-crush/home/scratch/xnu-lab/source/iokit/Kernel/IOUserServer.cpp:3213:21: warning: variable 'msgid' set but not used [-Wunused-but-set-variable]
+ 3213 |         uint64_t           msgid;
+      |                            ^
+/Volumes/porter-crush/home/scratch/xnu-lab/source/iokit/Kernel/IOUserServer.cpp:3518:21: warning: variable 'machid' set but not used [-Wunused-but-set-variable]
+ 3518 |         mach_msg_id_t      machid;
+      |                            ^
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/miscfs/specfs/spec_vnops.c:533:8: warning: variable 'dev' set but not used [-Wunused-but-set-variable]
+  533 |         dev_t dev;
+      |               ^
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/miscfs/specfs/spec_vnops.c:3099:8: warning: variable 'dev' set but not used [-Wunused-but-set-variable]
+ 3099 |         dev_t dev;
+      |               ^
+2 warnings generated.
+             CC bpf.o
+12 warnings generated.
+            C++ IOProviderPropertyMerger.cpo
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/bpf.c:565:6: warning: variable 'count' set but not used [-Wunused-but-set-variable]
+  565 |         int count = 0;
+      |             ^
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/bpf.c:3458:26: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 3458 |         bpf_tap_mbuf(ifp, 0, m, NULL, 0, mbuf_pkthdr_rcvif(m) == NULL);
+      |                                 ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/bpf.c:3458:26: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 3458 |         bpf_tap_mbuf(ifp, 0, m, NULL, 0, mbuf_pkthdr_rcvif(m) == NULL);
+      |                                 ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+In file included from /Volumes/porter-crush/home/scratch/xnu-lab/source/iokit/Kernel/IOProviderPropertyMerger.cpp:29:
+In file included from /Volumes/porter-crush/home/scratch/xnu-lab/source/iokit/IOKit/IOProviderPropertyMerger.h:33:
+In file included from /Volumes/porter-crush/home/scratch/xnu-lab/source/iokit/IOKit/IOService.h:44:
+In file included from /Volumes/porter-crush/home/scratch/xnu-lab/source/iokit/IOKit/IORegistryEntry.h:40:
+In file included from /Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSContainers.h:33:
+In file included from /Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSObject.h:37:
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:1149:15: warning: 'retain' overrides a member function but is not marked 'override' [-Wsuggest-override]
+ 1149 |         virtual void retain() const;
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:637:15: note: overridden virtual function is here
+  637 |         virtual void retain() const = 0;
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:1163:15: warning: 'release' overrides a member function but is not marked 'override' [-Wsuggest-override]
+ 1163 |         virtual void release() const;
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:655:15: note: overridden virtual function is here
+  655 |         virtual void release() const = 0;
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:1180:15: warning: 'release' overrides a member function but is not marked 'override' [-Wsuggest-override]
+ 1180 |         virtual void release(int freeWhen) const;
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:601:15: note: overridden virtual function is here
+  601 |         virtual void release(int freeWhen) const = 0;
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:1197:15: warning: 'taggedRetain' overrides a member function but is not marked 'override' [-Wsuggest-override]
+ 1197 |         virtual void taggedRetain(const void * tag = NULL) const;
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:885:15: note: overridden virtual function is here
+  885 |         virtual void taggedRetain(const void * tag = NULL) const = 0;
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:1214:15: warning: 'taggedRelease' overrides a member function but is not marked 'override' [-Wsuggest-override]
+ 1214 |         virtual void taggedRelease(const void * tag = NULL) const;
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:904:15: note: overridden virtual function is here
+  904 |         virtual void taggedRelease(const void * tag = NULL) const = 0;
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:1232:15: warning: 'taggedRelease' overrides a member function but is not marked 'override' [-Wsuggest-override]
+ 1232 |         virtual void taggedRelease(
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:923:15: note: overridden virtual function is here
+  923 |         virtual void taggedRelease(
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:1252:14: warning: 'getRetainCount' overrides a member function but is not marked 'override' [-Wsuggest-override]
+ 1252 |         virtual int getRetainCount() const;
+      |                     ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:619:14: note: overridden virtual function is here
+  619 |         virtual int getRetainCount() const = 0;
+      |                     ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:1265:30: warning: 'getMetaClass' overrides a member function but is not marked 'override' [-Wsuggest-override]
+ 1265 |         virtual const OSMetaClass * getMetaClass() const;
+      |                                     ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:688:30: note: overridden virtual function is here
+  688 |         virtual const OSMetaClass * getMetaClass() const = 0;
+      |                                     ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:1337:2: warning: '~OSMetaClass' overrides a destructor but is not marked 'override' [-Wsuggest-destructor-override]
+ 1337 |         ~OSMetaClass();
+      |         ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:555:2: note: overridden virtual function is here
+  555 |         ~OSMetaClassBase();
+      |         ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:2615:15: warning: 'serialize' overrides a member function but is not marked 'override' [-Wsuggest-override]
+ 2615 |         virtual bool serialize(OSSerialize * serializer) const;
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:673:15: note: overridden virtual function is here
+  673 |         virtual bool serialize(OSSerialize * serializer) const = 0;
+      |                      ^
+10 warnings generated.
+            C++ KernelConfigTables.cpo
+            C++ IOKitBSDInit.cpo
+3 warnings generated.
+             CC bpf_filter.o
+In file included from /Volumes/porter-crush/home/scratch/xnu-lab/source/iokit/bsddev/IOKitBSDInit.cpp:30:
+In file included from /Volumes/porter-crush/home/scratch/xnu-lab/source/iokit/IOKit/IOService.h:44:
+In file included from /Volumes/porter-crush/home/scratch/xnu-lab/source/iokit/IOKit/IORegistryEntry.h:40:
+In file included from /Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSContainers.h:33:
+In file included from /Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSObject.h:37:
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:1149:15: warning: 'retain' overrides a member function but is not marked 'override' [-Wsuggest-override]
+ 1149 |         virtual void retain() const;
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:637:15: note: overridden virtual function is here
+  637 |         virtual void retain() const = 0;
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:1163:15: warning: 'release' overrides a member function but is not marked 'override' [-Wsuggest-override]
+ 1163 |         virtual void release() const;
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:655:15: note: overridden virtual function is here
+  655 |         virtual void release() const = 0;
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:1180:15: warning: 'release' overrides a member function but is not marked 'override' [-Wsuggest-override]
+ 1180 |         virtual void release(int freeWhen) const;
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:601:15: note: overridden virtual function is here
+  601 |         virtual void release(int freeWhen) const = 0;
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:1197:15: warning: 'taggedRetain' overrides a member function but is not marked 'override' [-Wsuggest-override]
+ 1197 |         virtual void taggedRetain(const void * tag = NULL) const;
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:885:15: note: overridden virtual function is here
+  885 |         virtual void taggedRetain(const void * tag = NULL) const = 0;
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:1214:15: warning: 'taggedRelease' overrides a member function but is not marked 'override' [-Wsuggest-override]
+ 1214 |         virtual void taggedRelease(const void * tag = NULL) const;
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:904:15: note: overridden virtual function is here
+  904 |         virtual void taggedRelease(const void * tag = NULL) const = 0;
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:1232:15: warning: 'taggedRelease' overrides a member function but is not marked 'override' [-Wsuggest-override]
+ 1232 |         virtual void taggedRelease(
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:923:15: note: overridden virtual function is here
+  923 |         virtual void taggedRelease(
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:1252:14: warning: 'getRetainCount' overrides a member function but is not marked 'override' [-Wsuggest-override]
+ 1252 |         virtual int getRetainCount() const;
+      |                     ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:619:14: note: overridden virtual function is here
+  619 |         virtual int getRetainCount() const = 0;
+      |                     ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:1265:30: warning: 'getMetaClass' overrides a member function but is not marked 'override' [-Wsuggest-override]
+ 1265 |         virtual const OSMetaClass * getMetaClass() const;
+      |                                     ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:688:30: note: overridden virtual function is here
+  688 |         virtual const OSMetaClass * getMetaClass() const = 0;
+      |                                     ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:1337:2: warning: '~OSMetaClass' overrides a destructor but is not marked 'override' [-Wsuggest-destructor-override]
+ 1337 |         ~OSMetaClass();
+      |         ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:555:2: note: overridden virtual function is here
+  555 |         ~OSMetaClassBase();
+      |         ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:2615:15: warning: 'serialize' overrides a member function but is not marked 'override' [-Wsuggest-override]
+ 2615 |         virtual bool serialize(OSSerialize * serializer) const;
+      |                      ^
+/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/c++/OSMetaClass.h:673:15: note: overridden virtual function is here
+  673 |         virtual bool serialize(OSSerialize * serializer) const = 0;
+      |                      ^
+In file included from /Volumes/porter-crush/home/scratch/xnu-lab/source/iokit/bsddev/IOKitBSDInit.cpp:40:
+In file included from /Volumes/porter-crush/home/scratch/xnu-lab/build/obj/EXPORT_HDRS/libkern/libkern/amfi/amfi.h:35:
+In file included from /Volumes/porter-crush/home/scratch/xnu-lab/additions/CoreEntitlements/V2/API.h:11:
+In file included from /Volumes/porter-crush/home/scratch/xnu-lab/additions/CoreEntitlements/V2/Context.h:11:
+/Volumes/porter-crush/home/scratch/xnu-lab/additions/CoreEntitlements/V2/Return.h:18:10: fatal error: 'libDER/asn1Types.h' file not found
+   18 | #include <libDER/asn1Types.h>
+      |          ^~~~~~~~~~~~~~~~~~~~
+10 warnings and 1 error generated.
+make[7]: *** [IOKitBSDInit.cpo] Error 1
+make[6]: *** [build_all] Error 2
+make[5]: *** [do_all] Error 2
+make[4]: *** [build_all] Error 2
+make[3]: *** [build_all_recurse_into_conf] Error 2
+make[2]: *** [build_all_recurse_into_iokit] Error 2
+make[2]: *** Waiting for unfinished jobs....
+             CC if_bridge.o
+             CC if.o
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_bridge.c:1551:38: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 1551 |         proto_count = if_get_protolist(ifp, NULL, 0);
+      |                                             ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_bridge.c:1551:38: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 1551 |         proto_count = if_get_protolist(ifp, NULL, 0);
+      |                                             ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_bridge.c:1914:31: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 1914 |         return if_get_protolist(ifp, NULL, 0) >= 2;
+      |                                      ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_bridge.c:1914:31: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 1914 |         return if_get_protolist(ifp, NULL, 0) >= 2;
+      |                                      ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_bridge.c:5689:2: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 5689 |         BRIDGE_BPF_TAP_OUT(ifp, m);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_bridge.c:324:50: note: expanded from macro 'BRIDGE_BPF_TAP_OUT'
+  324 |                         bpf_tap_out(ifp, DLT_EN10MB, m, NULL, 0);       \
+      |                                                         ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_bridge.c:5689:2: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 5689 |         BRIDGE_BPF_TAP_OUT(ifp, m);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_bridge.c:324:50: note: expanded from macro 'BRIDGE_BPF_TAP_OUT'
+  324 |                         bpf_tap_out(ifp, DLT_EN10MB, m, NULL, 0);       \
+      |                                                         ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_bridge.c:5820:3: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 5820 |                 BRIDGE_BPF_TAP_IN(ifp, scan);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_bridge.c:317:49: note: expanded from macro 'BRIDGE_BPF_TAP_IN'
+  317 |                         bpf_tap_in(ifp, DLT_EN10MB, m, NULL, 0);        \
+      |                                                        ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_bridge.c:5820:3: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 5820 |                 BRIDGE_BPF_TAP_IN(ifp, scan);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_bridge.c:317:49: note: expanded from macro 'BRIDGE_BPF_TAP_IN'
+  317 |                         bpf_tap_in(ifp, DLT_EN10MB, m, NULL, 0);        \
+      |                                                        ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_bridge.c:6266:3: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 6266 |                 BRIDGE_BPF_TAP_IN(dst_if, mc_in);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_bridge.c:317:49: note: expanded from macro 'BRIDGE_BPF_TAP_IN'
+  317 |                         bpf_tap_in(ifp, DLT_EN10MB, m, NULL, 0);        \
+      |                                                        ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_bridge.c:6266:3: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 6266 |                 BRIDGE_BPF_TAP_IN(dst_if, mc_in);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_bridge.c:317:49: note: expanded from macro 'BRIDGE_BPF_TAP_IN'
+  317 |                         bpf_tap_in(ifp, DLT_EN10MB, m, NULL, 0);        \
+      |                                                        ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_bridge.c:8120:27: warning: variable 'mne' set but not used [-Wunused-but-set-variable]
+ 8120 |         struct mac_nat_entry    *mne = NULL;
+      |                                  ^
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_bridge.c:10491:36: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 10491 |         seg = m_seg(m0, state->hlen, mss, 0, 0);
+       |                                           ^
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_bridge.c:10491:36: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 10491 |         seg = m_seg(m0, state->hlen, mss, 0, 0);
+       |                                           ^
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if.c:805:6: warning: variable 'err' set but not used [-Wunused-but-set-variable]
+  805 |         int err;
+      |             ^
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if.c:2635:30: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 2635 |                         error = ifnet_reset_order(NULL, 0);
+      |                                                   ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if.c:2635:30: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 2635 |                         error = ifnet_reset_order(NULL, 0);
+      |                                                   ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if.c:2867:32: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 2867 |         count = if_get_protolist(ifp, NULL, 0);
+      |                                       ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if.c:2867:32: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 2867 |         count = if_get_protolist(ifp, NULL, 0);
+      |                                       ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+5 warnings generated.
+             CC init.o
+             CC dlil.o
+13 warnings generated.
+             CC dlil_ctl.o
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/dlil.c:3695:43: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 3695 |         if_proto_count = dlil_ifp_protolist(ifp, NULL, 0);
+      |                                                  ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/dlil.c:3695:43: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 3695 |         if_proto_count = dlil_ifp_protolist(ifp, NULL, 0);
+      |                                                  ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/dlil.c:4494:61: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 4494 |         ev_pr_data.proto_remaining_count = dlil_ifp_protolist(ifp, NULL, 0);
+      |                                                                    ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/dlil.c:4494:61: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 4494 |         ev_pr_data.proto_remaining_count = dlil_ifp_protolist(ifp, NULL, 0);
+      |                                                                    ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+             CC dlil_input.o
+4 warnings generated.
+             CC dlil_output.o
+             CC dlil_subr.o
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/dlil_subr.c:529:61: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+  529 |         ev_pr_data.proto_remaining_count = dlil_ifp_protolist(ifp, NULL, 0);
+      |                                                                    ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/dlil_subr.c:529:61: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+  529 |         ev_pr_data.proto_remaining_count = dlil_ifp_protolist(ifp, NULL, 0);
+      |                                                                    ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+             CC dlil_sysctl.o
+2 warnings generated.
+             CC ether_if_module.o
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/ether_if_module.c:170:6: warning: variable 'found' set but not used [-Wunused-but-set-variable]
+  170 |         int found = 0;
+      |             ^
+1 warning generated.
+             CC if_loop.o
+             CC if_fake.o
+             CC if_headless.o
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_fake.c:1523:52: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 1523 |                 bpf_tap_packet_in(dif->iff_ifp, DLT_EN10MB, dph, NULL, 0);
+      |                                                                  ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_fake.c:1523:52: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 1523 |                 bpf_tap_packet_in(dif->iff_ifp, DLT_EN10MB, dph, NULL, 0);
+      |                                                                  ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_fake.c:1611:52: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 1611 |                 bpf_tap_packet_in(dif->iff_ifp, DLT_EN10MB, dph, NULL, 0);
+      |                                                                  ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_fake.c:1611:52: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 1611 |                 bpf_tap_packet_in(dif->iff_ifp, DLT_EN10MB, dph, NULL, 0);
+      |                                                                  ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_fake.c:2295:44: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 2295 |                 bpf_tap_packet_out(ifp, DLT_EN10MB, sph, NULL, 0);
+      |                                                          ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_fake.c:2295:44: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 2295 |                 bpf_tap_packet_out(ifp, DLT_EN10MB, sph, NULL, 0);
+      |                                                          ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_fake.c:2927:56: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 2927 |                 bpf_tap_packet_out(fakeif->iff_ifp, DLT_EN10MB, sph, NULL, 0);
+      |                                                                      ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_fake.c:2927:56: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 2927 |                 bpf_tap_packet_out(fakeif->iff_ifp, DLT_EN10MB, sph, NULL, 0);
+      |                                                                      ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+8 warnings generated.
+             CC if_redirect.o
+             CC route.o
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_redirect.c:247:36: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+  247 |                 bpf_tap_packet_in(ifp, dlt, pkt, NULL, 0);
+      |                                                  ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_redirect.c:247:36: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+  247 |                 bpf_tap_packet_in(ifp, dlt, pkt, NULL, 0);
+      |                                                  ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_redirect.c:249:37: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+  249 |                 bpf_tap_packet_out(ifp, dlt, pkt, NULL, 0);
+      |                                                   ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_redirect.c:249:37: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+  249 |                 bpf_tap_packet_out(ifp, dlt, pkt, NULL, 0);
+      |                                                   ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+4 warnings generated.
+             CC if_ports_used.o
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_ports_used.c:1271:11: warning: variable 'count' set but not used [-Wunused-but-set-variable]
+ 1271 |         uint32_t count = 0;
+      |                  ^
+             CC kpi_interface.o
+1 warning generated.
+             CC if_utun.o
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_utun.c:547:53: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+  547 |                 bpf_tap_packet_out(pcb->utun_ifp, DLT_RAW, tx_ph, NULL, 0);
+      |                                                                   ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_utun.c:547:53: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+  547 |                 bpf_tap_packet_out(pcb->utun_ifp, DLT_RAW, tx_ph, NULL, 0);
+      |                                                                   ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_utun.c:861:52: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+  861 |                 bpf_tap_packet_in(pcb->utun_ifp, DLT_RAW, rx_ph, NULL, 0);
+      |                                                                  ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_utun.c:861:52: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+  861 |                 bpf_tap_packet_in(pcb->utun_ifp, DLT_RAW, rx_ph, NULL, 0);
+      |                                                                  ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_utun.c:982:53: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+  982 |                         bpf_tap_packet_in(pcb->utun_ifp, DLT_RAW, rx_ph, NULL, 0);
+      |                                                                          ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_utun.c:982:53: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+  982 |                         bpf_tap_packet_in(pcb->utun_ifp, DLT_RAW, rx_ph, NULL, 0);
+      |                                                                          ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/kpi_interface.c:3095:12: warning: variable 'ifindex' set but not used [-Wunused-but-set-variable]
+ 3095 |         u_int32_t ifindex;
+      |                   ^
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_utun.c:2901:47: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 2901 |                         bpf_tap_out(pcb->utun_ifp, DLT_NULL, data, 0, 0);
+      |                                                                    ^
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_utun.c:2901:47: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 2901 |                         bpf_tap_out(pcb->utun_ifp, DLT_NULL, data, 0, 0);
+      |                                                                    ^
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_utun.c:3282:48: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 3282 |                         bpf_tap_in(pcb->utun_ifp, DLT_NULL, packet, 0, 0);
+      |                                                                     ^
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_utun.c:3282:48: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 3282 |                         bpf_tap_in(pcb->utun_ifp, DLT_NULL, packet, 0, 0);
+      |                                                                     ^
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_utun.c:3586:47: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 3586 |                                 bpf_tap_in(pcb->utun_ifp, DLT_NULL, data, 0, 0);
+      |                                                                           ^
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_utun.c:3586:47: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 3586 |                                 bpf_tap_in(pcb->utun_ifp, DLT_NULL, data, 0, 0);
+      |                                                                           ^
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_utun.c:3736:53: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 3736 |                 bpf_tap_packet_out(pcb->utun_ifp, DLT_RAW, tx_ph, NULL, 0);
+      |                                                                   ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_utun.c:3736:53: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 3736 |                 bpf_tap_packet_out(pcb->utun_ifp, DLT_RAW, tx_ph, NULL, 0);
+      |                                                                   ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+1 warning generated.
+             CC if_ipsec.o
+14 warnings generated.
+             CC necp_client.o
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_ipsec.c:866:54: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+  866 |                 bpf_tap_packet_out(pcb->ipsec_ifp, DLT_RAW, tx_ph, NULL, 0);
+      |                                                                    ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_ipsec.c:866:54: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+  866 |                 bpf_tap_packet_out(pcb->ipsec_ifp, DLT_RAW, tx_ph, NULL, 0);
+      |                                                                    ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_ipsec.c:1168:54: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 1168 |                 bpf_tap_packet_out(pcb->ipsec_ifp, DLT_RAW, tx_ph, NULL, 0);
+      |                                                                    ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_ipsec.c:1168:54: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 1168 |                 bpf_tap_packet_out(pcb->ipsec_ifp, DLT_RAW, tx_ph, NULL, 0);
+      |                                                                    ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_ipsec.c:1676:53: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 1676 |                 bpf_tap_packet_in(pcb->ipsec_ifp, DLT_RAW, rx_ph, NULL, 0);
+      |                                                                   ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_ipsec.c:1676:53: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 1676 |                 bpf_tap_packet_in(pcb->ipsec_ifp, DLT_RAW, rx_ph, NULL, 0);
+      |                                                                   ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_ipsec.c:1755:54: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 1755 |                         bpf_tap_packet_in(pcb->ipsec_ifp, DLT_RAW, rx_ph, NULL, 0);
+      |                                                                           ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/if_ipsec.c:1755:54: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+ 1755 |                         bpf_tap_packet_in(pcb->ipsec_ifp, DLT_RAW, rx_ph, NULL, 0);
+      |                                                                           ^~~~
+/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS/stddef.h:48:14: note: expanded from macro 'NULL'
+   48 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+In file included from /Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/net/necp_client.c:75:
+In file included from /Volumes/porter-crush/home/scratch/xnu-lab/kdk-25A353/root/System/Library/Frameworks/Kernel.framework/Versions/A/PrivateHeaders/platform/CodeSignature/Entitlements.h:69:
+In file included from /Volumes/porter-crush/home/scratch/xnu-lab/additions/CoreEntitlements/V2/API.h:11:
+In file included from /Volumes/porter-crush/home/scratch/xnu-lab/additions/CoreEntitlements/V2/Context.h:11:
+/Volumes/porter-crush/home/scratch/xnu-lab/additions/CoreEntitlements/V2/Return.h:18:10: fatal error: 'libDER/asn1Types.h' file not found
+   18 | #include <libDER/asn1Types.h>
+      |          ^~~~~~~~~~~~~~~~~~~~
+8 warnings generated.
+             CC pf_ioctl.o
+1 error generated.
+make[7]: *** [necp_client.o] Error 1
+make[7]: *** Waiting for unfinished jobs....
+make[6]: *** [build_all] Error 2
+make[5]: *** [do_all] Error 2
+make[4]: *** [build_all] Error 2
+make[3]: *** [build_all_recurse_into_conf] Error 2
+make[2]: *** [build_all_recurse_into_bsd] Error 2
+make[1]: *** [build_all_bootstrap_DEVELOPMENT^ARM64^VMAPPLE] Error 2
+make: *** [all] Error 2
+exit_status=2 timeout=0

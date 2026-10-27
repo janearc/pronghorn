@@ -1,0 +1,48 @@
+revision=f6217f891ac0bb64f3d375211650a4c1ff8ca1ea
+cwd=/Volumes/porter-crush/home/scratch/xnu-lab/source
+command=/usr/bin/make -j2 MAKEJOBS=-j2 SDKROOT=/Volumes/porter-crush/home/scratch/xnu-lab/MacOSX26.2.sdk ARCH_CONFIGS=ARM64 KERNEL_CONFIGS=DEVELOPMENT MACHINE_CONFIGS=VMAPPLE RC_DARWIN_KERNEL_VERSION=12377.1.9 OBJROOT=/Volumes/porter-crush/home/scratch/xnu-lab/build/obj SYMROOT=/Volumes/porter-crush/home/scratch/xnu-lab/build/sym DSTROOT=/Volumes/porter-crush/home/scratch/xnu-lab/build/dst KDKROOT=/Volumes/porter-crush/home/scratch/xnu-lab/kdk-25A353/root MAKE_SYMBOL_ALIASING=/Volumes/porter-crush/home/trees/roads/xnu-lab/symbol-aliasing.sh all SDKVERSION=26.2 PLATFORMPATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform PLATFORM=MacOSX 'INCFLAGS_EXTERN=-I/Volumes/porter-crush/home/scratch/xnu-lab/additions -I/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS' 'INCFLAGS_SDK=-I/Volumes/porter-crush/home/scratch/xnu-lab/MacOSX26.2.sdk/usr/local/include -I/Volumes/porter-crush/home/scratch/xnu-lab/kdk-25A353/root/System/Library/Frameworks/Kernel.framework/Versions/A/PrivateHeaders' INCFLAGS_PLATFORM=-I/Volumes/porter-crush/home/scratch/xnu-lab/kdk-25A353/root/System/Library/Frameworks/Kernel.framework/Versions/A/PrivateHeaders/platform 'KCC=sh /Volumes/porter-crush/home/trees/roads/xnu-lab/kernel-cc.sh -ivfsoverlay /Volumes/porter-crush/home/scratch/xnu-lab/additions/clang-overlay.json' 'KC++=xcrun --sdk macosx clang++ -ivfsoverlay /Volumes/porter-crush/home/scratch/xnu-lab/additions/clang-overlay.json' 'LDFLAGS_KERNEL_ONLY_CONFIG_DEVELOPMENTARM64=-rdynamic -Wl,-force_load,/Volumes/porter-crush/home/scratch/xnu-lab/kdk-25A353/root/System/Library/KernelSupport/libVMAPPLE.os.DEVELOPMENT.a'
+             CC mac_audit.o
+             CC dead_vnops.o
+             CC devfs_fdesc_support.o
+             CC mac_base.o
+             CC fifo_vnops.o
+             CC mac_data.o
+             CC spec_vnops.o
+             CC mac_label.o
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/miscfs/specfs/spec_vnops.c:533:8: error: variable 'dev' set but not used [-Werror,-Wunused-but-set-variable]
+  533 |         dev_t dev;
+      |               ^
+/Volumes/porter-crush/home/scratch/xnu-lab/source/bsd/miscfs/specfs/spec_vnops.c:3099:8: error: variable 'dev' set but not used [-Werror,-Wunused-but-set-variable]
+ 3099 |         dev_t dev;
+      |               ^
+2 errors generated.
+make[7]: *** [spec_vnops.o] Error 1
+make[6]: *** [build_all] Error 2
+make[5]: *** [do_all] Error 2
+make[4]: *** [build_all] Error 2
+make[3]: *** [build_all_recurse_into_conf] Error 2
+make[2]: *** [build_all_recurse_into_bsd] Error 2
+make[2]: *** Waiting for unfinished jobs....
+             CC mac_necp.o
+             CC mac_process.o
+             CC mac_vfs.o
+             CC mac_vfs_subr.o
+             CC mac_skywalk.o
+             CC mac_system.o
+             CC mac_sysv_sem.o
+             CC mac_sysv_shm.o
+             CC mac_sysv_msg.o
+             CC mac_posix_sem.o
+             CC mac_posix_shm.o
+             CC mac_socket.o
+             CC mac_pipe.o
+             CC mac_iokit.o
+             CC mac_file.o
+             CC mac_priv.o
+             CC mac_pty.o
+             CC mac_kext.o
+             CC mac_mach.o
+     LDFILELIST security
+make[1]: *** [build_all_bootstrap_DEVELOPMENT^ARM64^VMAPPLE] Error 2
+make: *** [all] Error 2
+exit_status=2 timeout=0

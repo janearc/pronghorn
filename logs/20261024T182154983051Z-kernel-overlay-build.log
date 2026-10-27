@@ -1,0 +1,197 @@
+revision=f6217f891ac0bb64f3d375211650a4c1ff8ca1ea
+cwd=/Volumes/porter-crush/home/scratch/xnu-lab/source
+command=/usr/bin/make -j2 MAKEJOBS=-j2 SDKROOT=/Volumes/porter-crush/home/scratch/xnu-lab/MacOSX26.2.sdk ARCH_CONFIGS=ARM64 KERNEL_CONFIGS=DEVELOPMENT MACHINE_CONFIGS=VMAPPLE RC_DARWIN_KERNEL_VERSION=12377.1.9 OBJROOT=/Volumes/porter-crush/home/scratch/xnu-lab/build/obj SYMROOT=/Volumes/porter-crush/home/scratch/xnu-lab/build/sym DSTROOT=/Volumes/porter-crush/home/scratch/xnu-lab/build/dst KDKROOT=/Volumes/porter-crush/home/scratch/xnu-lab/kdk-25A353/root MAKE_SYMBOL_ALIASING=/Volumes/porter-crush/home/trees/roads/xnu-lab/symbol-aliasing.sh all SDKVERSION=26.2 PLATFORMPATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform PLATFORM=MacOSX 'INCFLAGS_EXTERN=-I/Volumes/porter-crush/home/scratch/xnu-lab/additions -I/Volumes/porter-crush/home/scratch/xnu-lab/source/EXTERNAL_HEADERS' 'INCFLAGS_SDK=-I/Volumes/porter-crush/home/scratch/xnu-lab/MacOSX26.2.sdk/usr/local/include -I/Volumes/porter-crush/home/scratch/xnu-lab/kdk-25A353/root/System/Library/Frameworks/Kernel.framework/Versions/A/PrivateHeaders' INCFLAGS_PLATFORM=-I/Volumes/porter-crush/home/scratch/xnu-lab/kdk-25A353/root/System/Library/Frameworks/Kernel.framework/Versions/A/PrivateHeaders/platform 'KCC=sh /Volumes/porter-crush/home/trees/roads/xnu-lab/kernel-cc.sh clang -ivfsoverlay /Volumes/porter-crush/home/scratch/xnu-lab/additions/clang-overlay.json' 'CXX=sh /Volumes/porter-crush/home/trees/roads/xnu-lab/kernel-cc.sh clang++ -ivfsoverlay /Volumes/porter-crush/home/scratch/xnu-lab/additions/clang-overlay.json' 'LDFLAGS_KERNEL_ONLY_CONFIG_DEVELOPMENTARM64=-rdynamic -Wl,-force_load,/Volumes/porter-crush/home/scratch/xnu-lab/kdk-25A353/root/System/Library/KernelSupport/libVMAPPLE.os.DEVELOPMENT.a'
+            LTO kernel.development.vmapple.unstripped.noctf
+             LD kernel.development.vmapple.unstripped.noctf
+ld: warning: option '-no_dead_strip_inits_and_terms' is obsolete, use '-dead_strip' instead
+ld: warning: -segment_order should list all segments, __PRELINK_TEXT is missing
+ld: warning: -segment_order should list all segments, __PRELINK_INFO is missing
+ld: warning: -segment_order should list all segments, __PLK_TEXT_EXEC is missing
+ld: warning: -segment_order should list all segments, __PRELINK_DATA is missing
+ld: warning: -segment_order should list all segments, __PLK_DATA_CONST is missing
+ld: warning: -segment_order should list all segments, __PLK_LLVM_COV is missing
+ld: warning: -segment_order should list all segments, __PLK_LINKEDIT is missing
+ld: warning: -segment_order should list all segments, __LINKINFO is missing
+ld: warning: -segment_order of __LINKEDIT is ignored, the segment must be ordered last
+       DSYMUTIL kernel.development.vmapple.dSYM
+          STRIP kernel.development.vmapple
+        LIBTOOL kernel.development.vmapple.a
+built kernel at /Volumes/porter-crush/home/scratch/xnu-lab/build/obj/DEVELOPMENT_ARM64_VMAPPLE//kernel.development.vmapple
+      INSTALLPY usertaskdebugging/__init__.py
+  SUPPORTED_KPI arm64
+      INSTALLPY usertaskdebugging/gdbserver.py
+      INSTALLPY usertaskdebugging/interface.py
+      INSTALLPY usertaskdebugging/rsprotocol.py
+  SUPPORTED_KPI all
+      INSTALLPY usertaskdebugging/target.py
+      INSTALLPY usertaskdebugging/userprocess.py
+      INSTALLPY core/__init__.py
+      INSTALLPY core/caching.py
+         SYMSET BSDKernel (arm64)
+         SYMSET IOKit (arm64)
+      INSTALLPY core/iterators.py
+         SYMSET Libkern (arm64)
+         SYMSET Mach (arm64)
+      INSTALLPY core/configuration.py
+         SYMSET MACFramework (arm64)
+         SYMSET Unsupported (arm64)
+         SYMSET Private (arm64)
+      INSTALLPY core/cvalue.py
+      INSTALLPY core/io.py
+      INSTALLPY core/kernelcore.py
+      INSTALLPY core/lazytarget.py
+         SYMSET Kasan (arm64, development )
+      INSTALLPY core/lldbwrap.py
+         SYMSET Kcov (arm64, development )
+      INSTALLPY core/operating_system.py
+      INSTALLPY core/pointer.py
+      INSTALLPY core/standard.py
+      INSTALLPY core/xnu_lldb_init.py
+      INSTALLPY kmemory/__init__.py
+      INSTALLPY kmemory/btlog.py
+      INSTALLPY kmemory/kmem.py
+      INSTALLPY kmemory/vm.py
+      INSTALLPY kmemory/whatis.py
+      INSTALLPY kmemory/zone.py
+      INSTALLPY plugins/__init__.py
+      INSTALLPY plugins/zprint_perf_log.py
+      INSTALLPY sysregdoc/AArch64-esr_el1.xml
+      INSTALLPY bank.py
+      INSTALLPY turnstile.py
+      INSTALLPY kevent.py
+      INSTALLPY workqueue.py
+      INSTALLPY ulock.py
+      INSTALLPY xnu.py
+      INSTALLPY xnudefines.py
+      INSTALLPY ktrace.py
+      INSTALLPY macho.py
+      INSTALLPY mbufdefines.py
+      INSTALLPY netdefines.py
+      INSTALLPY routedefines.py
+      INSTALLPY ntstat.py
+      INSTALLPY ipcimportancedetail.py
+      INSTALLPY ipc.py
+      INSTALLPY kcdata.py
+      INSTALLPY scheduler.py
+      INSTALLPY structanalyze.py
+      INSTALLPY pmap.py
+      INSTALLPY memory.py
+      INSTALLPY memorystatus.py
+      INSTALLPY mbufs.py
+      INSTALLPY microstackshot.py
+      INSTALLPY net.py
+      INSTALLPY skywalk.py
+      INSTALLPY ioreg.py
+      INSTALLPY utils.py
+      INSTALLPY kdp.py
+      INSTALLPY process.py
+      INSTALLPY userspace.py
+      INSTALLPY pci.py
+      INSTALLPY misc.py
+      INSTALLPY apic.py
+      INSTALLPY kasan.py
+      INSTALLPY usertaskgdbserver.py
+      INSTALLPY waitq.py
+      INSTALLPY xnutriage.py
+      INSTALLPY kmtriage.py
+      INSTALLPY zonetriage.py
+      INSTALLPY recount.py
+      INSTALLPY sysreg.py
+      INSTALLPY counter.py
+      INSTALLPY refgrp.py
+      INSTALLPY workload.py
+      INSTALLPY log.py
+      INSTALLPY kext.py
+      INSTALLPY nvram.py
+      INSTALLPY taskinfo.py
+      INSTALLPY exclaves.py
+      INSTALLPY vm_pageout.py
+      INSTALLPY tests/integration_smoke/__init__.py
+      INSTALLPY tests/integration_smoke/lldb_session.py
+      INSTALLPY tests/integration_smoke/conftest.py
+      INSTALLPY tests/integration_smoke/test_lldb_macros.py
+      INSTALLPY kernel_development.py
+      INSTALLPY usertaskdebugging/__init__.py
+      INSTALLPY usertaskdebugging/gdbserver.py
+      INSTALLPY usertaskdebugging/interface.py
+      INSTALLPY usertaskdebugging/rsprotocol.py
+      INSTALLPY usertaskdebugging/target.py
+      INSTALLPY usertaskdebugging/userprocess.py
+      INSTALLPY core/__init__.py
+      INSTALLPY core/caching.py
+      INSTALLPY core/iterators.py
+      INSTALLPY core/configuration.py
+      INSTALLPY core/cvalue.py
+      INSTALLPY core/io.py
+      INSTALLPY core/kernelcore.py
+      INSTALLPY core/lazytarget.py
+      INSTALLPY core/lldbwrap.py
+      INSTALLPY core/operating_system.py
+      INSTALLPY core/pointer.py
+      INSTALLPY core/standard.py
+      INSTALLPY core/xnu_lldb_init.py
+      INSTALLPY kmemory/__init__.py
+      INSTALLPY kmemory/btlog.py
+      INSTALLPY kmemory/kmem.py
+      INSTALLPY kmemory/vm.py
+      INSTALLPY kmemory/whatis.py
+      INSTALLPY kmemory/zone.py
+      INSTALLPY plugins/__init__.py
+      INSTALLPY plugins/zprint_perf_log.py
+      INSTALLPY sysregdoc/AArch64-esr_el1.xml
+      INSTALLPY bank.py
+      INSTALLPY turnstile.py
+      INSTALLPY kevent.py
+      INSTALLPY workqueue.py
+      INSTALLPY ulock.py
+      INSTALLPY xnu.py
+      INSTALLPY xnudefines.py
+      INSTALLPY ktrace.py
+      INSTALLPY macho.py
+      INSTALLPY mbufdefines.py
+      INSTALLPY netdefines.py
+      INSTALLPY ntstat.py
+      INSTALLPY routedefines.py
+      INSTALLPY ipc.py
+      INSTALLPY ipcimportancedetail.py
+      INSTALLPY kcdata.py
+      INSTALLPY scheduler.py
+      INSTALLPY structanalyze.py
+      INSTALLPY pmap.py
+      INSTALLPY memory.py
+      INSTALLPY memorystatus.py
+      INSTALLPY mbufs.py
+      INSTALLPY microstackshot.py
+      INSTALLPY net.py
+      INSTALLPY skywalk.py
+      INSTALLPY ioreg.py
+      INSTALLPY utils.py
+      INSTALLPY kdp.py
+      INSTALLPY process.py
+      INSTALLPY userspace.py
+      INSTALLPY pci.py
+      INSTALLPY misc.py
+      INSTALLPY apic.py
+      INSTALLPY kasan.py
+      INSTALLPY usertaskgdbserver.py
+      INSTALLPY waitq.py
+      INSTALLPY xnutriage.py
+      INSTALLPY kmtriage.py
+      INSTALLPY zonetriage.py
+      INSTALLPY recount.py
+      INSTALLPY sysreg.py
+      INSTALLPY counter.py
+      INSTALLPY refgrp.py
+      INSTALLPY workload.py
+      INSTALLPY log.py
+      INSTALLPY kext.py
+      INSTALLPY nvram.py
+      INSTALLPY taskinfo.py
+      INSTALLPY exclaves.py
+      INSTALLPY vm_pageout.py
+      INSTALLPY tests/integration_smoke/__init__.py
+      INSTALLPY tests/integration_smoke/lldb_session.py
+      INSTALLPY tests/integration_smoke/conftest.py
+      INSTALLPY tests/integration_smoke/test_lldb_macros.py
+      INSTALLPY kernel_development.py
+exit_status=0 timeout=0
