@@ -1,4 +1,0 @@
-revision=f6217f891ac0bb64f3d375211650a4c1ff8ca1ea
-cwd=/Volumes/porter-crush/home/trees/roads/xnu-lab
-command=pkgutil --expand-full '/Volumes/porter-crush/home/scratch/xnu-lab/kdk-25A353/packages/Kernel Debug Kit/KernelDebugKit.pkg' /Volumes/porter-crush/home/scratch/xnu-lab/kdk-25A353/expanded
-exit_status=0 timeout=0
