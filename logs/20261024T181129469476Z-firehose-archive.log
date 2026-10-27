@@ -1,4 +1,0 @@
-revision=f6217f891ac0bb64f3d375211650a4c1ff8ca1ea
-cwd=/Volumes/porter-crush/home/trees/roads/xnu-lab
-command=xcrun libtool -static -o /Volumes/porter-crush/home/scratch/xnu-lab/MacOSX26.2.sdk/usr/local/lib/kernel/libfirehose_kernel.a /Volumes/porter-crush/home/scratch/xnu-lab/firehose/firehose.o
-exit_status=0 timeout=0

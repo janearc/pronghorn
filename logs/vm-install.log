@@ -1,7 +1,0 @@
-2026-10-24T20:25:53Z loading_restore_image=/Users/jane/var/shared/UniversalMac_26.0_25A353_Restore.ipsw
-2026-10-24T20:25:53Z restore_build=25A353 restore_version=NSOperatingSystemVersion(majorVersion: 26, minorVersion: 0, patchVersion: 0)
-2026-10-24T20:25:53Z minimum_cpus=2 minimum_memory=4294967296
-2026-10-24T20:25:53Z install_started cpus=2 memory_bytes=4294967296 disk_bytes=68719476736
-2026-10-24T20:25:58Z install_progress=0.0
-2026-10-24T20:25:59Z error=An error occurred during installation. Installation failed.
-game: run install-vm: ./xnu-vm install: exit status 1

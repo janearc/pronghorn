@@ -1,5 +1,0 @@
-revision=f6217f891ac0bb64f3d375211650a4c1ff8ca1ea
-cwd=/Volumes/porter-crush/home/trees/roads/xnu-lab
-command=file /Volumes/porter-crush/home/scratch/xnu-lab/build/obj/DEVELOPMENT_ARM64_VMAPPLE/kernel.development.vmapple
-/Volumes/porter-crush/home/scratch/xnu-lab/build/obj/DEVELOPMENT_ARM64_VMAPPLE/kernel.development.vmapple: Mach-O 64-bit executable arm64e
-exit_status=0 timeout=0
